@@ -244,8 +244,6 @@ break;
        		case "purge" :
        		message.delete(5000);
        		break;
-        default:
-        message.channel.send("M-maître ;-; je n'ai pas reconnu votre commande ; -;");
     }
 	
 if (message.content.startsWith(PREFIX + "si")) {
