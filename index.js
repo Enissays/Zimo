@@ -97,7 +97,7 @@ if (message.author.bot) return;
         modchannel.send(message.author.username + " a besoin de vous. 263274484763590656" );
         break;
         case "setgame":
-        if (message.author.id != owneni) return message.channel.send("Vous n\'etes pas Enissay, desolé"); 
+        if (message.author.id !== "398393307966734336") return message.channel.send("Vous n\'etes pas Enissay, desolé"); 
         var game = args.slice(1).join(" ")
         bot.user.setActivity(game, {
         'type': 'PLAYING'
