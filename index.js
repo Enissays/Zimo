@@ -172,7 +172,7 @@ break;
    				var ztbadges = " (🐟)"
    			} else 
 			if (message.author.id == 398393307966734336) {
-				var ztbadges = " (Elkiruuia, Dev)"
+				var ztbadges = " (Elki', Dev)"
 				} else 
    			if (message.author.id == message.guild.owner.id){
    				var ztbadges = " (Createur du serveur)"
