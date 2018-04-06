@@ -227,7 +227,7 @@ break;
         message.channel.send("M-maître ;-; je n'ai pas reconnu votre commande ; -;");
     }
 	
-if (message.content.startsWith(PREFIX + "si")) {
+/*if (message.content.startsWith(PREFIX + "si")) {
   let si = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField("Nom du serveur :", message.guild.name)
@@ -235,7 +235,7 @@ if (message.content.startsWith(PREFIX + "si")) {
   .addField("Crée le :", message.guild.createdAt)
   .addField("Nombre de total de membre :", message.guild.memberCount)
   message.channel.sendEmbed(si)
-}
+}*/
 	
 });
 
