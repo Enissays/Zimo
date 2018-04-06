@@ -55,7 +55,6 @@ bot.on("message", function(message) {
 	switch (args[0].toLowerCase()) {
         case "ping":
         message.channel.send("Ping !").then(sentMessage => sentMessage.edit("Pong !"));
-        message.channel.send(bot.ping + " ms");
           break;
         case "8ball":
        var fortuneResult = getFortune();
