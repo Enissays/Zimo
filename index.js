@@ -5,7 +5,7 @@ const owneni = 334095574674571264
 const swearWords = ['Zimo', 'zimo'];
 const ownphoenix = 285832267216191498
 const ownsomeone = 259730334252269568
-const ownelki = 398393307966734336
+const ownelki = "398393307966734336"
 const PREFIX = "zi!";
 const Attachment = ('discord.js').MessageAttachment
 var fortunes = ["Go go gooo", "Naaah , tente pas", "Hmm pas vraiment .3.", "Genre , vraiment x) ?","Woah , tu rêves.","Hmmm, je doute que ca marcherai","Oooh , sûrement"];
@@ -243,8 +243,7 @@ break;
        		break;
        		case "purge" :
        		message.delete(5000);
-       		break;
-    }
+       		break;    }
 	
 if (message.content.startsWith(PREFIX + "si")) {
   let si = new Discord.RichEmbed()
