@@ -251,7 +251,7 @@ if (message.content.startsWith(PREFIX + "si")) {
   .addField("Nom du serveur :", message.guild.name)
   .addField("Créateur :", message.guild.owner)
   .addField("Crée le :", message.guild.createdAt)
-  .addField("Nombre de total de membre :", message.guild.memberCount)
+  .addField("Nombre de total de membre :", message.guild.member.length)
   message.channel.sendEmbed(si)
 }
 	
