@@ -14,8 +14,10 @@ bot.on("message", message => {
     if(message.author.id !== "398393307966734336") { 
       return message.channel.sendMessage(":x: Vous n'avez pas la permission.");
       }
-    let args = message.content.split(' ').slice(1);
-    bot.user.setActivity(args)
+    var game = args.slice(1).join(" ")
+    bot.user.setActivity(game, {
+     'type': 'PLAYING'
+    });
     message.channel.send(":white_check_mark: Done.")
   }
 })
