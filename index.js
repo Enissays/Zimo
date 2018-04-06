@@ -19,7 +19,7 @@ if(message.content.startsWith(PREFIX + 'say')) {
     return message.reply(":x: Vous n'avez pas l'accès.").catch(console.error)
     }
     message.delete(2)
-    message.channel.send(message.content.slice(4, message.content.lenght));
+    message.channel.send(message.content.slice(6, message.content.lenght));
   }
 
 });
