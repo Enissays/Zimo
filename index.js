@@ -15,7 +15,7 @@ bot.on("message", message => {
       return message.channel.sendMessage(":x: Vous n'avez pas la permission.");
       }
     let args = message.content.split(' ').slice(1);
-    client.user.setGame(args)
+    bot.user.setGame(args)
     message.channel.send(":white_check_mark: Done.")
   }
 })
