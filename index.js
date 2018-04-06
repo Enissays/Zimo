@@ -9,19 +9,6 @@ const PREFIX = "zi!";
 const Attachment = ('discord.js').MessageAttachment
 var fortunes = ["Go go gooo", "Naaah , tente pas", "Hmm pas vraiment .3.", "Genre , vraiment x) ?","Woah , tu rêves.","Hmmm, je doute que ca marcherai","Oooh , sûrement"];
 
-bot.on("message", message => {
-  if(message.content.startsWith(PREFIX + "setGame")) {
-    if(message.author.id !== "398393307966734336") { 
-      return message.channel.sendMessage(":x: Vous n'avez pas la permission.");
-      }
-    var game = args.slice(1).join(" ")
-    bot.user.setActivity(game, {
-     'type': 'PLAYING'
-    });
-    message.channel.send(":white_check_mark: Done.")
-  }
-})
-
 function getFortune() {
     return fortunes[Math.floor(Math.random() * 6)];
 }
@@ -172,7 +159,7 @@ break;
    				var ztbadges = " (🐟)"
    			} else 
 			if (message.author.id == 398393307966734336) {
-				var ztbadges = " (Elki', Dev)"
+				var ztbadges = " (Elkiruuia, Dev)"
 				} else 
    			if (message.author.id == message.guild.owner.id){
    				var ztbadges = " (Createur du serveur)"
