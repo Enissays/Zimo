@@ -9,7 +9,7 @@ const PREFIX = "zi!";
 const Attachment = ('discord.js').MessageAttachment
 var fortunes = ["Go go gooo", "Naaah , tente pas", "Hmm pas vraiment .3.", "Genre , vraiment x) ?","Woah , tu rêves.","Hmmm, je doute que ca marcherai","Oooh , sûrement"];
 
-client.on("message", message => {
+bot.on("message", message => {
   if(message.content.startsWith(PREFIX + "setGame")) {
     if(message.author.id !== "398393307966734336") { 
       return message.channel.sendMessage(":x: Vous n'avez pas la permission.");
