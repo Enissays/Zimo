@@ -12,14 +12,17 @@ var fortunes = ["Go go gooo", "Naaah , tente pas", "Hmm pas vraiment .3.", "Genr
 
 // Code Elki
 
+bot.on("message", message => {
+
 if(message.content.startsWith(PREFIX + 'say')) {
   if(message.author.id !== ownelki){
     return message.reply(":x: Vous n'avez pas l'accès.").catch(console.error)
     }
     message.delete(2)
     message.channel.send(message.content.slice(5, message.content.lenght));
+  }
 
-}
+});
 
 
 // Code Global
