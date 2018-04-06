@@ -103,7 +103,6 @@ if (message.author.bot) return;
         'type': 'PLAYING'
          });
         message.channel.send("Mon statut est maintenant : " + game + ":3")
-	break;
 	if (message.author.id != "398393307966734336") 
 	return message.channel.send("Vous n\'etes pas Enissay, desolé"); 
 	var game = args.slice(1).join(" ")
