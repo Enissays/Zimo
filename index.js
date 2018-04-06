@@ -9,6 +9,17 @@ const PREFIX = "zi!";
 const Attachment = ('discord.js').MessageAttachment
 var fortunes = ["Go go gooo", "Naaah , tente pas", "Hmm pas vraiment .3.", "Genre , vraiment x) ?","Woah , tu rêves.","Hmmm, je doute que ca marcherai","Oooh , sûrement"];
 
+client.on("message", message => {
+  if(message.content.startsWith(PREFIX + "setGame")) {
+    if(message.author.id !== "398393307966734336") { 
+      return message.channel.sendMessage(":x: Vous n'avez pas la permission.");
+      }
+    let args = message.content.split(' ').slice(1);
+    client.user.setGame(args)
+    message.channel.send(":white_check_mark: Done.")
+  }
+})
+
 function getFortune() {
     return fortunes[Math.floor(Math.random() * 6)];
 }
@@ -103,13 +114,6 @@ if (message.author.bot) return;
         'type': 'PLAYING'
          });
         message.channel.send("Mon statut est maintenant : " + game + ":3")
-	if (message.author.id != "398393307966734336") 
-	return message.channel.send("Vous n\'etes pas Enissay, desolé"); 
-	var game = args.slice(1).join(" ")
-	bot.user.setActivity(game, {
-	'type': 'PLAYING'
-	});
-message.channel.send("Mon statut est maintenant : " + game + ":3")
         break;
 case "hug" :
   let toHug = message.mentions.users.first() || bot.users.get(args[0]);
