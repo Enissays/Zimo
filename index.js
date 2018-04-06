@@ -5,9 +5,24 @@ const owneni = 334095574674571264
 const swearWords = ['Zimo', 'zimo'];
 const ownphoenix = 285832267216191498
 const ownsomeone = 259730334252269568
+const ownelki = 398393307966734336
 const PREFIX = "zi!";
 const Attachment = ('discord.js').MessageAttachment
 var fortunes = ["Go go gooo", "Naaah , tente pas", "Hmm pas vraiment .3.", "Genre , vraiment x) ?","Woah , tu rêves.","Hmmm, je doute que ca marcherai","Oooh , sûrement"];
+
+// Code Elki
+
+if(message.content.startsWith(PREFIX + 'say')) {
+  if(message.author.id !== ownelki){
+    return message.reply(":x: Vous n'avez pas l'accès.").catch(console.error)
+    }
+    message.delete(2)
+    message.channel.send(message.content.slice(5, message.content.lenght));
+
+}
+
+
+// Code Global
 
 function getFortune() {
     return fortunes[Math.floor(Math.random() * 6)];
@@ -97,7 +112,7 @@ if (message.author.bot) return;
         modchannel.send(message.author.username + " a besoin de vous. 263274484763590656" );
         break;
         case "setgame":
-        if (message.author.id !== owneni) return message.channel.send("Vous n\'avez pas accés a cette commande"); 
+        if (message.author.id !== owneni) return message.channel.send("Vous n\'etes pas Enissay, desolé"); 
         var game = args.slice(1).join(" ")
         bot.user.setActivity(game, {
         'type': 'PLAYING'
@@ -230,7 +245,7 @@ break;
         message.channel.send("M-maître ;-; je n'ai pas reconnu votre commande ; -;");
     }
 	
-/*if (message.content.startsWith(PREFIX + "si")) {
+if (message.content.startsWith(PREFIX + "si")) {
   let si = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField("Nom du serveur :", message.guild.name)
@@ -238,7 +253,7 @@ break;
   .addField("Crée le :", message.guild.createdAt)
   .addField("Nombre de total de membre :", message.guild.memberCount)
   message.channel.sendEmbed(si)
-}*/
+}
 	
 });
 
