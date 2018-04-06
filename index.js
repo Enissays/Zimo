@@ -33,7 +33,7 @@ bot.on("guildCreate", guild => {
 });
 
 bot.on("message", function(message) {
-if (user.bot) return;
+if (message.author.bot) return;
 	if (message.author.equals(bot.user)) return;
 	if( swearWords.some(word => message.content.includes(word)) ) {
   message.reply("Hewwo , ca parle de moi ? Mentionnez moi si vous avez besoin d'aide.");
