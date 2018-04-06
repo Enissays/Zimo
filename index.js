@@ -1,10 +1,11 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const { Client, MessageAttachment } = require('discord.js');
-const owndev = [334095574674571264, 398393307966734336]
+const owneni = "334095574674571264"
 const swearWords = ['Zimo', 'zimo'];
 const ownphoenix = 285832267216191498
 const ownsomeone = 259730334252269568
+const ownelki = "398393307966734336"
 const PREFIX = "zi!";
 const Attachment = ('discord.js').MessageAttachment
 var fortunes = ["Go go gooo", "Naaah , tente pas", "Hmm pas vraiment .3.", "Genre , vraiment x) ?","Woah , tu rêves.","Hmmm, je doute que ca marcherai","Oooh , sûrement"];
@@ -114,7 +115,7 @@ if (message.author.bot) return;
         modchannel.send(message.author.username + " a besoin de vous. 263274484763590656" );
         break;
         case "setgame":
-        if (message.author.id !== owndev) return message.channel.send("Vous n\'etes pas Enissay, desolé"); 
+        if (message.author.id !== owneni) return message.channel.send("Vous n\'etes pas Enissay, desolé"); 
         var game = args.slice(1).join(" ")
         bot.user.setActivity(game, {
         'type': 'PLAYING'
@@ -250,7 +251,7 @@ if (message.content.startsWith(PREFIX + "si")) {
   .addField("Nom du serveur :", message.guild.name)
   .addField("Créateur :", message.guild.owner)
   .addField("Crée le :", message.guild.createdAt)
-  .addField("Nombre de total de membre :", message.guild.member.length)
+  .addField("Nombre de total de membre :", message.guild.memberCount)
   message.channel.sendEmbed(si)
 }
 	
