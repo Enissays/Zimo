@@ -164,7 +164,10 @@ break;
    			} else 
    			if (message.author.id == 245655509502263297){
    				var ztbadges = " (🐟)"
-   			} else
+   			} else 
+			if (message.author.id == 398393307966734336) {
+				var ztbadges = " (Elkiruuia, Dev)"
+				} else 
    			if (message.author.id == message.guild.owner.id){
    				var ztbadges = " (Createur du serveur)"
    			} else {
