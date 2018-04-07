@@ -273,7 +273,10 @@ if (message.content.startsWith(PREFIX + "si")) {
   .addField("Nombre de total de membre :", message.guild.memberCount)
   message.channel.sendEmbed(si)
 }
-	
+if (message.channel.id == '396386935725096980') {
+	message.react('❤️');
+	message.channel.send("Okay , allez voir les commentaires a votre dessins dans #draws-commentary-wip");
+};
 });
 
 bot.login(process.env.TOKEN);
