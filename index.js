@@ -226,10 +226,14 @@ break;
        		break;
        		case "purge" :
        		message.delete(5000);
-       		break;    }
+       		break;    
+}
+
+});
 // code useless
 if (message.channel == message.guild.channels.find('name', 'ztk')) {
-	if (message.content.startsWith("zi!ztk")) {     if (message.guild === null) return message.reply("S'ilvouplait , faites ca dans un serveur ou ajoutez le au tien :p");
+	if (message.content.startsWith("zi!ztk")) {
+		if (message.guild === null) return message.reply("S'ilvouplait , faites ca dans un serveur ou ajoutez le au tien :p");
    		if (message.author.id == owneni) {
    			var ztbadges = " (Enissay, Dev)"
    		} else 
@@ -258,11 +262,10 @@ if (message.channel == message.guild.channels.find('name', 'ztk')) {
        		.setDescription(ztmessage)
        		.setThumbnail(message.author.avatarURL)
        		.setFooter(message.guild.name + " || Id de l'utilisateur : " + message.author.id )
-       		.setColor(rolcolor)
-   			let chan = bot.channels.find("name", "ztk"); 
+       		.setColor(rolcolor);
 			message.delete();
 			bot.channels.filter(c => c.name === 'ztk').forEach(c => c.send(ztembed))
-						  } else {
+			 } else {
 	message.reply("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
 };	
 if (message.content.startsWith(PREFIX + "si")) {
@@ -273,8 +276,7 @@ if (message.content.startsWith(PREFIX + "si")) {
   .addField("Crée le :", message.guild.createdAt)
   .addField("Nombre de total de membre :", message.guild.memberCount)
   message.channel.sendEmbed(si)
-}
+};
 
-});
 
 bot.login(process.env.TOKEN);
