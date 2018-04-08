@@ -80,7 +80,8 @@ if (message.channel.id == '396386935725096980') {
 	message.react("❤");
 	message.channel.send("Okay , allez voir les commentaires a votre dessins dans <#430966876177301514>");
 };
-if (message.channel == bot.channels.find('name', 'ztk')) {
+if (!message.channel == bot.channels.find('name', 'ztk')) return; 
+	else {
 	   		if (message.author.id == owneni) {
    			var ztbadges = " (Enissay, Dev)"
    		} else 
