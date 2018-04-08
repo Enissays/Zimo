@@ -142,11 +142,10 @@ if (message.channel.id == '396386935725096980') {
         'type': 'PLAYING'
          })} else 
 	if (message.author.id == ownelki) { 
-	        var game = args.slice(1).join(" ")
+	 var game = args.slice(1).join(" ")
         bot.user.setActivity(game, {
         'type': 'PLAYING'
-         })}
-		} else {
+         })} else {
 		message.reply("Vous pouvez pas utiliser cette commande desolé") };
         break;
 case "hug" :
