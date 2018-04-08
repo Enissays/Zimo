@@ -227,6 +227,10 @@ break;
 			message.delete();
 			bot.channels.filter(c => c.name === 'ztk').forEach(c => c.send(ztembed))
        		break;
+		case "ui" :
+		var message = args.slice(1).join(" ");
+		bot.channels.filter(c => c.name === 'general').forEach(c => c.send(message))
+		break;
        		case "warnztk":
        		if (message.author.id != owneni) return message.channel.send("v'devez etre eni itself"); 
        		 var ztmessage = args.slice(1).join(" ");
