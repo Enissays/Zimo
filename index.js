@@ -136,12 +136,17 @@ if (message.channel.id == '396386935725096980') {
         modchannel.send(message.author.username + " a besoin de vous. 263274484763590656" );
         break;
         case "setgame":
-        if (message.author.id != owneni) {
-		if (message.author.id == ownelki) { 
+        if (message.author.id == owneni) {
         var game = args.slice(1).join(" ")
         bot.user.setActivity(game, {
         'type': 'PLAYING'
-         })}} else {
+         })} else 
+	if (message.author.id == ownelki) { 
+	        var game = args.slice(1).join(" ")
+        bot.user.setActivity(game, {
+        'type': 'PLAYING'
+         })}
+		} else {
 		message.reply("Vous pouvez pas utiliser cette commande desolé") };
         break;
 case "hug" :
