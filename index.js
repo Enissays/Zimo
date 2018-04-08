@@ -102,8 +102,6 @@ if (message.channel == bot.channels.find('name', 'ztk')) {
    		var ztbadges = " "
 
    		};
-        const zimotalkie = bot.channels.get("428981828679106581");
-        if (!zimotalkie) return;
        var ztmessage = args.slice(1).join(" ");
        var rolcolor = message.member.highestRole.color;
        var ztembed = new Discord.RichEmbed()
