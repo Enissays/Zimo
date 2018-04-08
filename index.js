@@ -80,6 +80,18 @@ if (message.channel.id == '396386935725096980') {
 	message.react("❤");
 	message.channel.send("Okay , allez voir les commentaires a votre dessins dans <#430966876177301514>");
 };
+if (message.channel == bot.channel.find('name', 'ztk')  {
+	   var ztmessage = args.slice(1).join(" ");
+       var rolcolor = message.member.highestRole.color;
+       var ztembed = new Discord.RichEmbed()
+       		.setTitle(message.author.username + ztbadges)
+       		.setDescription(ztmessage)
+       		.setThumbnail(message.author.avatarURL)
+       		.setFooter(message.guild.name + " || Id de l'utilisateur : " + message.author.id )
+       		.setColor(rolcolor)
+			message.delete();
+			bot.channels.filter(c => c.name === 'ztk').forEach(c => c.send(ztembed))
+	};
 	if (message.content === "enissay") {
 	message.react("💩")
 	} 
