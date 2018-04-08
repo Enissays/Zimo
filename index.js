@@ -229,7 +229,7 @@ break;
        		break;    
 }
 
-});
+};
 // code useless
 if (message.channel == message.guild.channels.find('name', 'ztk')) {
 	if (message.content.startsWith("zi!ztk")) {
