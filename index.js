@@ -81,7 +81,7 @@ if (message.channel.id == '396386935725096980') {
 	message.channel.send("Okay , allez voir les commentaires a votre dessins dans <#430966876177301514>");
 };
 if (message.channel == bot.channels.find('name', 'ztk')) {
-	var ztmessage = args.slice(1).join(" ");
+	var ztmessage = (message.content.slice(6, message.content.lenght));
        var rolcolor = message.member.highestRole.color;
        var ztembed = new Discord.RichEmbed()
        		.setTitle(message.author.username + ztbadges)
