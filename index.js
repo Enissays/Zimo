@@ -84,7 +84,7 @@ if (message.channel == bot.channels.find('name', 'ztk')) {
 	message.react("💩")
 	} 
 		if (message.content === "<@407525785520308224>") {
-			if (message.author.id != owneni) {
+			if (message.author.id !== owneni) {
 	message.channel.send("Hey " + message.author.username + " , mon prefixe est zi! , essaye zi!help :3")
 		} else {
 			message.channel.send("Salut Maître Enissay !")
