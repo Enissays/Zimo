@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const { Client, MessageAttachment } = require('discord.js');
 const owneni = "334095574674571264"
-const swearWords = ['Zimo', 'zimo'];
 const ownphoenix = 285832267216191498
 const ownsomeone = 259730334252269568
 const ownelki = "398393307966734336"
@@ -72,10 +71,7 @@ bot.on("guildCreate", guild => {
 bot.on("message", function(message) {
 if (message.author.bot) return;
 	if (message.author.equals(bot.user)) return;
-	if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("Hewwo , ca parle de moi ? Mentionnez moi si vous avez besoin d'aide.");
-  	
-}
+
 if (message.channel.id == '396386935725096980') {
 	message.react("❤");
 	message.channel.send("Okay , allez voir les commentaires a votre dessins dans <#430966876177301514>");
@@ -92,8 +88,8 @@ if (message.channel == bot.channels.find('name', 'ztk')) {
 	message.channel.send("Hey " + message.author.username + " , mon prefixe est zi! , essaye zi!help :3")
 		} else {
 			message.channel.send("Salut Maître Enissay !")
-		};
-	} 
+		}
+	};
 	if (!message.content.startsWith(PREFIX)) return;
 
 	var args = message.content.substring(PREFIX.length).split(" ");
