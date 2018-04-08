@@ -83,19 +83,7 @@ if (message.channel.id == '396386935725096980') {
 if (message.channel == bot.channels.find('name', 'ztk')) {
 	if (message.content.startsWith("zi!ztk")) return;
 	message.channel.send("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
-}
-       var ztmessage = args.slice(1).join(" ");
-       var rolcolor = message.member.highestRole.color;
-       var ztembed = new Discord.RichEmbed()
-       		.setTitle(message.author.username + ztbadges)
-       		.setDescription(ztmessage)
-       		.setThumbnail(message.author.avatarURL)
-       		.setFooter(message.guild.name + " || Id de l'utilisateur : " + message.author.id )
-       		.setColor(rolcolor)
-   			let chan = bot.channels.find("name", "ztk"); 
-			message.delete();
-			bot.channels.filter(c => c.name === 'ztk').forEach(c => c.send(ztembed))
-	};
+};
 	if (message.content === "enissay") {
 	message.react("💩")
 	} 
@@ -224,8 +212,6 @@ break;
    		var ztbadges = " "
 
    		};
-        const zimotalkie = bot.channels.get("428981828679106581");
-        if (!zimotalkie) return;
        var ztmessage = args.slice(1).join(" ");
        var rolcolor = message.member.highestRole.color;
        var ztembed = new Discord.RichEmbed()
