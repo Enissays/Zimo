@@ -264,8 +264,6 @@ break;
 			break; 
 }			
 
-});
-
 if (message.content.startsWith(PREFIX + "si")) {
   let si = new Discord.RichEmbed()
   .setColor("RANDOM")
@@ -275,6 +273,8 @@ if (message.content.startsWith(PREFIX + "si")) {
   .addField("Nombre de total de membre :", message.guild.memberCount)
   message.channel.sendEmbed(si)
 };
+
+});
 
 
 bot.login(process.env.TOKEN);
