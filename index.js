@@ -80,29 +80,9 @@ if (message.channel.id == '396386935725096980') {
 	message.react("❤");
 	message.channel.send("Okay , allez voir les commentaires a votre dessins dans <#430966876177301514>");
 };
-if (!message.channel == bot.channels.find('name', 'ztk')) return; 
-	else {
-	   		if (message.author.id == owneni) {
-   			var ztbadges = " (Enissay, Dev)"
-   		} else 
-   		if (message.author.id == ownphoenix) {
-   			var ztbadges = " (Phoenix, Admin)"
-   		} else  
-   			if (message.author.id == ownsomeone) {
-   				var ztbadges = " (Someone, Co-owner)" 
-   			} else 
-   			if (message.author.id == 245655509502263297){
-   				var ztbadges = " (🐟)"
-   			} else 
-			if (message.author.id == 398393307966734336) {
-				var ztbadges = " (Elkiruuia, Dev)"
-				} else 
-   			if (message.author.id == message.guild.owner.id){
-   				var ztbadges = " (Createur du serveur)"
-   			} else {
-   		var ztbadges = " "
-
-   		};
+if (message.channel == bot.channels.find('name', 'ztk')) {
+	message.channel.send("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
+}
        var ztmessage = args.slice(1).join(" ");
        var rolcolor = message.member.highestRole.color;
        var ztembed = new Discord.RichEmbed()
