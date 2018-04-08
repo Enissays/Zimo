@@ -73,8 +73,13 @@ if (message.author.bot) return;
 	if (message.author.equals(bot.user)) return;
 
 if (message.channel.id == '396386935725096980') {
+    if(message.attachments.size <= 0) {
+        message.delete(); 
+    } else {
+
 	message.react("❤");
 	message.channel.send("Okay , allez voir les commentaires a votre dessins dans <#430966876177301514>");
+    
 };
 
 	if (message.content === "enissay") {
