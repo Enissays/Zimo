@@ -80,7 +80,7 @@ if (message.channel.id == '396386935725096980') {
 	message.react("❤");
 	message.channel.send("Okay , allez voir les commentaires a votre dessins dans <#430966876177301514>");
     
-};
+}};
 
 	if (message.content === "enissay") {
 	message.react("💩")
