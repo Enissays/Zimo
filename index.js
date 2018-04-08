@@ -136,12 +136,13 @@ if (message.channel.id == '396386935725096980') {
         modchannel.send(message.author.username + " a besoin de vous. 263274484763590656" );
         break;
         case "setgame":
-        if (message.author.id != owneni) return message.channel.send("Vous n\'etes pas Enissay, desolé"); 
+        if (message.author.id != owneni) {
+		if (message.author.id == ownelki) { 
         var game = args.slice(1).join(" ")
         bot.user.setActivity(game, {
         'type': 'PLAYING'
-         });
-        message.channel.send("Mon statut est maintenant : " + game + ":3")
+         }) else {
+		message.reply("Vous pouvez pas utiliser cette commande desolé") };
         break;
 case "hug" :
   let toHug = message.mentions.users.first() || bot.users.get(args[0]);
