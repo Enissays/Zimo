@@ -78,7 +78,7 @@ if (message.channel.id == '396386935725096980') {
 };
 if (message.channel == message.guild.channels.find('name', 'ztk')) {
 	if (message.content.startsWith("zi!ztk")) return;
-	message.channel.reply("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
+	message.reply("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
 };
 	if (message.content === "enissay") {
 	message.react("💩")
