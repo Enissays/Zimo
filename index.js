@@ -181,42 +181,7 @@ break;
         'url':'https://www.twitch.tv/enissays'
          });
         message.channel.send("Mon statut est maintenant : " + game + " :3")
-        break;
-       case "ztk" :
-       if (message.guild === null) return message.reply("S'ilvouplait , faites ca dans un serveur ou ajoutez le au tien :p");
-   		if (message.author.id == owneni) {
-   			var ztbadges = " (Enissay, Dev)"
-   		} else 
-   		if (message.author.id == ownphoenix) {
-   			var ztbadges = " (Phoenix, Admin)"
-   		} else  
-   			if (message.author.id == ownsomeone) {
-   				var ztbadges = " (Someone, Co-owner)" 
-   			} else 
-   			if (message.author.id == 245655509502263297){
-   				var ztbadges = " (🐟)"
-   			} else 
-			if (message.author.id == 398393307966734336) {
-				var ztbadges = " (Elkiruuia, Dev)"
-				} else 
-   			if (message.author.id == message.guild.owner.id){
-   				var ztbadges = " (Createur du serveur)"
-   			} else {
-   		var ztbadges = " "
-
-   		};
-       var ztmessage = args.slice(1).join(" ");
-       var rolcolor = message.member.highestRole.color;
-       var ztembed = new Discord.RichEmbed()
-       		.setTitle(message.author.username + ztbadges)
-       		.setDescription(ztmessage)
-       		.setThumbnail(message.author.avatarURL)
-       		.setFooter(message.guild.name + " || Id de l'utilisateur : " + message.author.id )
-       		.setColor(rolcolor)
-   			let chan = bot.channels.find("name", "ztk"); 
-			message.delete();
-			bot.channels.filter(c => c.name === 'ztk').forEach(c => c.send(ztembed))
-       		break;
+        break;    
        		case "warnztk":
        		if (message.author.id != owneni) return message.channel.send("v'devez etre eni itself"); 
        		 var ztmessage = args.slice(1).join(" ");
@@ -264,7 +229,40 @@ break;
        		break;    }
 // code useless
 if (message.channel == message.guild.channels.find('name', 'ztk')) {
-	if (message.content.startsWith("zi!ztk")) return;
+	if (message.content.startsWith("zi!ztk")) {     if (message.guild === null) return message.reply("S'ilvouplait , faites ca dans un serveur ou ajoutez le au tien :p");
+   		if (message.author.id == owneni) {
+   			var ztbadges = " (Enissay, Dev)"
+   		} else 
+   		if (message.author.id == ownphoenix) {
+   			var ztbadges = " (Phoenix, Admin)"
+   		} else  
+   			if (message.author.id == ownsomeone) {
+   				var ztbadges = " (Someone, Co-owner)" 
+   			} else 
+   			if (message.author.id == 245655509502263297){
+   				var ztbadges = " (🐟)"
+   			} else 
+			if (message.author.id == 398393307966734336) {
+				var ztbadges = " (Elkiruuia, Dev)"
+				} else 
+   			if (message.author.id == message.guild.owner.id){
+   				var ztbadges = " (Createur du serveur)"
+   			} else {
+   		var ztbadges = " "
+
+   		};
+       var ztmessage = args.slice(1).join(" ");
+       var rolcolor = message.member.highestRole.color;
+       var ztembed = new Discord.RichEmbed()
+       		.setTitle(message.author.username + ztbadges)
+       		.setDescription(ztmessage)
+       		.setThumbnail(message.author.avatarURL)
+       		.setFooter(message.guild.name + " || Id de l'utilisateur : " + message.author.id )
+       		.setColor(rolcolor)
+   			let chan = bot.channels.find("name", "ztk"); 
+			message.delete();
+			bot.channels.filter(c => c.name === 'ztk').forEach(c => c.send(ztembed))
+						  } else {
 	message.reply("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
 };	
 if (message.content.startsWith(PREFIX + "si")) {
