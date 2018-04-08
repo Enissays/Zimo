@@ -262,7 +262,7 @@ break;
 			message.delete();
 			bot.channels.filter(c => c.name === 'ztk').forEach(c => c.send(ztembed))   
 			break; 
-}			
+			
 
 if (message.content.startsWith(PREFIX + "si")) {
   let si = new Discord.RichEmbed()
