@@ -82,12 +82,12 @@ if (message.channel.id == '396386935725096980') {
 };
 if (message.channel == bot.channels.find('name', 'ztk')) {
 	if (message.content.startsWith("zi!ztk")) return;
-	message.channel.send("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
+	message.channel.reply("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
 };
 	if (message.content === "enissay") {
 	message.react("💩")
 	} 
-		if (message.content === '<@407525785520308224>') {
+		if (message.content == '<@407525785520308224>') {
 			if (message.author.id != owneni) {
 	message.channel.send("Hey " + message.author.username + " , mon prefixe est zi! , essaye zi!help :3")
 		} else {
