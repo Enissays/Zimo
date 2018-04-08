@@ -76,10 +76,7 @@ if (message.channel.id == '396386935725096980') {
 	message.react("❤");
 	message.channel.send("Okay , allez voir les commentaires a votre dessins dans <#430966876177301514>");
 };
-if (message.channel == message.guild.channels.find('name', 'ztk')) {
-	if (message.content.startsWith("zi!ztk")) return;
-	message.reply("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
-};
+
 	if (message.content === "enissay") {
 	message.react("💩")
 	} 
@@ -265,7 +262,11 @@ break;
        		case "purge" :
        		message.delete(5000);
        		break;    }
-	
+// code useless
+if (message.channel == message.guild.channels.find('name', 'ztk')) {
+	if (message.content.startsWith("zi!ztk")) return;
+	message.reply("Vous cherchez a passer un message ? utiliser zi!ztk [Votre message]");
+};	
 if (message.content.startsWith(PREFIX + "si")) {
   let si = new Discord.RichEmbed()
   .setColor("RANDOM")
