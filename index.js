@@ -231,7 +231,7 @@ break;
        		.setColor(rolcolor)
    			let chan = bot.channels.find("name", "ztk"); 
 			message.delete();
-			bot.channels.filter(c.name === 'ztk' && c.type === 'text').forEach(c => c.send(ztembed))
+			bot.channels.filter(c => c.name === 'ztk' && c.type === 'text').forEach(c => c.send(ztembed))
        		break;
 		case "ui" :
 		var message = args.slice(1).join(" ");
