@@ -42,7 +42,7 @@ if (message.content.startsWith(PREFIX + "add")) {
 
 });
 bot.on("guildMemberAdd", (member) => {
-if (member.guild.id == 362693232301441035) return;
+if (member.guild.id !== 362693232301441035) return;
  member.send(" :flag_ac: Welcome to Eni's server,  Enjoy your stay there :flag_ac: \n :flag_fr: Bienvenue dans le serveur d'Eni , Passe un bon temps chez nous ;3 !")
 
 
