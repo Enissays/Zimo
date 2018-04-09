@@ -280,9 +280,7 @@ break;
        		break;
 		case "connectztk":
 		    var server = message.guild;
-    var name = message.author.username;
-
-    server.createChannel(name, "ztk");
+    server.createChannel("ztk");
 		break;
         default:
         message.channel.send("M-maître ;-; je n'ai pas reconnu votre commande ; -;");
