@@ -223,7 +223,7 @@ break;
        		.setTitle(message.author.username + ztbadges)
        		.setDescription(ztmessage)
        		.setThumbnail(message.author.avatarURL)
-       		.setFooter(message.guild.name + " || Id de l'utilisateur : " + message.author.id )
+       		.setFooter("Id du serveur : " + message.guild.id + " || Id de l'utilisateur : " + message.author.id )
        		.setColor(rolcolor)
    			let chan = bot.channels.find("name", "ztk"); 
 			message.delete();
