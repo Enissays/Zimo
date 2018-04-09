@@ -218,7 +218,7 @@ break;
        var ztmessage = args.slice(1).join(" ");
        var rolcolor = message.member.highestRole.color;
        var ztembed = new Discord.RichEmbed()
-		.setAuthor(message.guild.id, message.guild.iconURL)
+		.setAuthor(message.guild.name, message.guild.iconURL)
        		.setTitle(message.author.username + ztbadges)
        		.setDescription(ztmessage)
        		.setThumbnail(message.author.avatarURL)
