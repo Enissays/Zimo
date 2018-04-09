@@ -194,6 +194,7 @@ break;
         message.channel.send("Mon statut est maintenant : " + game + " :3")
         break;
        case "ztk" :
+	    if(message.attachments.size > 0) return message.reply("desolé , la fonction d'envoi d'images n'est pas encore disponible :/");
        if (message.guild === null) return message.reply("S'ilvouplait , faites ca dans un serveur ou ajoutez le au tien :p");
    		if (message.author.id == owneni) {
    			var ztbadges = " (Enissay, Dev)"
