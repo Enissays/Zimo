@@ -67,7 +67,7 @@ bot.on("ready", function() {
 bot.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-         bot.user.setActivity(`Actuellement dans ${bot.guilds.size} guild`, {
+         bot.user.setActivity(`O-O || ${bot.guilds.size} Serveurs || zi!help `, {
         'type': 'PLAYING'
          });
 });
