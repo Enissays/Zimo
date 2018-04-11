@@ -286,6 +286,12 @@ break;
 		    var server = message.guild;
     server.createChannel("ztk");
 		break;
+		case "nbot" :
+		if (message.author.id != owneni) return; 
+		var nickpropo = args.slice(1).join(" ");
+		message.guild.members.get(bot.user.id).setNickname(nickpropo);
+		message.channel.send("Vouala :3");
+		break;
         default:
         message.channel.send("M-maître ;-; je n'ai pas reconnu votre commande ; -;");
     }
