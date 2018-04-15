@@ -299,6 +299,18 @@ break;
 		message.guild.members.get(bot.user.id).setNickname(nickpropo);
 		message.channel.send("Vouala :3");
 		break;
+		case "prp":
+	var purpanswer = args.slice(1).join(" ");
+		let purpembed = new Discord.RichEmbed()
+			.setAuthor(message.author.name, message.author.avatarURL)
+			.setDescription(purpanswer)		
+		bot.channels.get('435085714074632192').send(purpembed);
+		break;
+		case "parlor" :
+	if (message.author.id !== owneni) return;
+	var parlmess = args.slice(1).join(" ");
+	bot.channels.filter(c => c.name === 'zi-parlor' && c.type === 'text').forEach(c => c.send(parlmess));
+		break;
         default:
         message.channel.send("M-maître ;-; je n'ai pas reconnu votre commande ; -;");
     }
