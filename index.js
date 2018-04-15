@@ -302,7 +302,7 @@ break;
 		case "prp":
 	var purpanswer = args.slice(1).join(" ");
 		let purpembed = new Discord.RichEmbed()
-			.setAuthor(message.author.name, message.author.avatarURL)
+			.setAuthor(message.author.username, message.author.avatarURL)
 			.setDescription(purpanswer)		
 		bot.channels.get('435085714074632192').send(purpembed);
 		break;
