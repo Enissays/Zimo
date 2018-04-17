@@ -169,10 +169,11 @@ case "hug" :
   if (!toHug) return message.reply('Euh , S\'il te plait , choisi la personne que tu veux caliner ._. ');
   if (toHug.id == message.author.id) return message.reply('Oh...Moi aussi personne ne m\'aime ;-;');
   if (toHug.id == bot.user.id) return message.reply('OWI !!!');
-  message.channel.send(`Awwn, **${toHug.username}** vous recevez un doux hug de **${message.author.username}** :heart:`, { files: [{
+  message.channel.send(`Awwn, **${toHug.username}** vous recevez un doux hug de **${message.author.username}** :heart:`);
+/*{ files: [{
   attachment: "./tenor.gif",
   name: "hug.gif"
-}] });
+}] }*/
 break;
 case "kiss" :
   let toKiss = message.mentions.users.first() || bot.users.get(args[0]);
