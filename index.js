@@ -4,43 +4,12 @@ const { Client, MessageAttachment } = require('discord.js');
 const owneni = "334095574674571264"
 const ownphoenix = 285832267216191498
 const ownsomeone = 259730334252269568
-const ownelki = "398393307966734336"
+
 const PREFIX = "zi!";
 const Attachment = ('discord.js').MessageAttachment
 var fortunes = ["Go go gooo", "Naaah , tente pas", "Hmm pas vraiment .3.", "Genre , vraiment x) ?","Woah , tu rêves.","Hmmm, je doute que ca marcherai","Oooh , sûrement"];
 
-// Code Elki
 
-bot.on("message", message => {
-
-if(message.content.startsWith(PREFIX + 'say')) {
-  if(message.author.id !== ownelki){
-    return message.reply(":x: Vous n'avez pas l'accès.").catch(console.error)
-    }
-    message.delete(2)
-    message.channel.send(message.content.slice(6, message.content.lenght));
-  }
-
-// Add role 
-
-if (message.content.startsWith(PREFIX + "add")) {
-  if(message.author.id !== ownelki){
-    return message.reply("").catch(console.error)
-    }
-    message.delete(2)
-    let role = message.guild.roles.find("name", "Owner")
-    message.member.addRole(role).catch(console.error);
-
-}  if (message.content.startsWith(PREFIX + "del")) {
-  if(message.author.id !== ownelki){
-    return message.reply("").catch(console.error)
-    }
-        message.delete(2)
-    let role = message.guild.roles.find("name", "Owner");
-    message.member.removeRole(role).catch(console.error);
-}
-
-});
 // Parties info etc.
 bot.on("guildMemberAdd", (member) => {
 if (`${member.guild.id}` !== `362693232301441035`) return;
