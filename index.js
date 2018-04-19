@@ -8,7 +8,8 @@ const ownelki = "398393307966734336"
 const PREFIX = "zi!";
 const Attachment = ('discord.js').MessageAttachment
 var fortunes = ["Go go gooo", "Naaah , tente pas", "Hmm pas vraiment .3.", "Genre , vraiment x) ?","Woah , tu rêves.","Hmmm, je doute que ca marcherai","Oooh , sûrement"];
-
+const sql = require("sqlite");
+sql.open("./score.sqlite");
 // Code Elki
 
 bot.on("message", message => {
@@ -82,7 +83,35 @@ bot.on("guildCreate", guild => {
 bot.on("message", function(message) {
 if (message.author.bot) return;
 	if (message.author.equals(bot.user)) return;
+  sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+    if (!row) {
+      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+    } else {
+      sql.run(`UPDATE scores SET points = ${row.points + 1} WHERE userId = ${message.author.id}`);
+    }
+  }).catch(() => {
+    console.error;
+    sql.run("CREATE TABLE IF NOT EXISTS scores (userId TEXT, points INTEGER, level INTEGER)").then(() => {
+      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+    });
+  });
+let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
+if (curLevel > row.level) {
+  row.level = curLevel;
+  sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
+  message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
+}
 
+if (message.content.startsWith(PREFIX + "level")) {
+sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+  if (!row) return message.reply("Your current level is 0");
+  message.reply(`Your current level is ${row.level}`);
+});
+}; 
+
+if (message.content.startsWith(PREFIX + "points")) {
+
+}
 if (message.channel.id == '396386935725096980') {
     if(message.attachments.size <= 0) {
         message.delete(); 
