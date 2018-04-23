@@ -199,7 +199,7 @@ break;
         const zimotalkie = bot.channels.get("428981828679106581");
         if (!zimotalkie) return;
        var ztmessage = args.slice(1).join(" ");
-if (ztmessage.startsWith("https://discord.gg") return;
+
        var rolcolor = message.member.highestRole.color;
        var ztembed = new Discord.RichEmbed()
 		.setAuthor(message.guild.name, message.guild.iconURL)
