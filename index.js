@@ -24,6 +24,11 @@ bot.on("guildDelete", guild => {
         'type': 'PLAYING'
          });
 });
+bot.on("channelCreate", channel => {
+  if (channel.type('voice')) return;	
+  if (!channel.name('ztk')) return;
+ channel.send("Eh eh, un channel ztk a ce qu'il me parait, essayez zi!ztk [votre message] pour commencer.")
+});
 // Code Global
 
 function getFortune() {
