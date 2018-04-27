@@ -285,7 +285,7 @@ break;
 	bot.channels.filter(c => c.name === 'zi-parlor' && c.type === 'text').forEach(c => c.send(parlmess));
 		break;
 		case "avatar":
-	let avatared = message.mentions.user.first();
+	let avatared = message.mentions.users.first();
 	if (!avatared) return message.reply('Voici votre avatar' + message.author.avatarURL);
 	message.channel.send("Voici l'avatar de " + avatared + avatared.avatarURL);
 		break;
