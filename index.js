@@ -284,6 +284,11 @@ break;
 	var parlmess = args.slice(1).join(" ");
 	bot.channels.filter(c => c.name === 'zi-parlor' && c.type === 'text').forEach(c => c.send(parlmess));
 		break;
+		case "avatar":
+	let avatared = message.mentions.user.first();
+	if (!avatared) return message.reply('Voici votre avatar' + message.author.avatarURL);
+	message.channel.send("Voici l'avatar de " + avatared + avatared.avatarURL);
+		break;
         default:
         message.channel.send("M-maître ;-; je n'ai pas reconnu votre commande ; -;");
     }
