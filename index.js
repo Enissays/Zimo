@@ -286,8 +286,8 @@ break;
 		break;
 		case "avatar":
 	let avatared = message.mentions.users.first();
-	if (!avatared) return message.reply('Voici votre avatar' + message.author.avatarURL);
-	message.channel.send("Voici l'avatar de " + avatared + avatared.avatarURL);
+	if (!avatared) return message.reply('Voici votre avatar : ' + message.author.avatarURL);
+	message.channel.send("Voici l'avatar de " + avatared + " " + avatared.avatarURL);
 		break;
         default:
         message.channel.send("M-maître ;-; je n'ai pas reconnu votre commande ; -;");
